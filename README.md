@@ -24,3 +24,7 @@ using namespace cv;
 Mat img = imread("./test.jpg");
 imshow("cool", img);
 ```
+
+example :
+![demo image](https://github.com/Seachaos/opencv-cpp-for-xeus-cling/blob/master/notebook/demo.png)
+
