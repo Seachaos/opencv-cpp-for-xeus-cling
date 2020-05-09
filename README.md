@@ -1,5 +1,5 @@
 
-This repository is for create for Jupyter Xeus-Cling use.  
+This repository is create for Jupyter Xeus-Cling use.  
 and install in docker buikd :  
 https://github.com/Seachaos/docker-python-xeus-cling
 
