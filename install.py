@@ -7,7 +7,7 @@ PREFIX = '/usr/local/include/jupyter'
 
 INCLUDE_OPENCV_FILE_NAME = 'jupyter_opencv_include.h'
 
-INCLUDE_PATH ="""
+INCLUDE_PATH = """
 #pragma cling add_library_path("/usr/local/lib")
 #pragma cling add_include_path("/usr/local/include/opencv4/")
 #pragma cling add_include_path("/usr/local/include/")
@@ -39,6 +39,11 @@ def write_include_file():
         f.write(content)
 
 
-write_include_file()
+def main():
+    os.makedirs(PREFIX, exist_ok=True)
+    write_include_file()
+    copyfile('./jupyter/opencv.hpp', PREFIX + '/opencv')
 
-copyfile('./jupyter/opencv.hpp', PREFIX + '/opencv')
+
+if __name__ == '__main__':
+    main()
